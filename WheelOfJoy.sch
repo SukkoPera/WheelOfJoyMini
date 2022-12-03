@@ -357,10 +357,10 @@ F 3 "~" H 1985 5885 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:DB15_Female_MountingHoles CN9
+L Connector:DB15_Female_MountingHoles CN5
 U 1 1 636CDFF8
 P 1915 3025
-F 0 "CN9" H 1821 4017 50  0000 C CNN
+F 0 "CN5" H 1821 4017 50  0000 C CNN
 F 1 "DB15F" H 1821 3926 50  0000 C CNN
 F 2 "Connector_Dsub:DSUB-15_Female_EdgeMount_P2.77mm" H 1915 3025 50  0001 C CNN
 F 3 " ~" H 1915 3025 50  0001 C CNN
