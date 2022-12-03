@@ -1,0 +1,2048 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A3 16535 11693
+encoding utf-8
+Sheet 1 1
+Title "WheelOfJoy"
+Date "2022-11-06"
+Rev "1git"
+Comp "SukkoPera"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Analog_Switch:CD4051B U1
+U 1 1 631FFF1A
+P 12605 3005
+F 0 "U1" H 12920 3660 50  0000 C CNN
+F 1 "CD4051B" H 12860 2340 50  0000 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm_Socket_LongPads" H 12755 2255 50  0001 L CNN
+F 3 "http://www.ti.com/lit/ds/symlink/cd4052b.pdf" H 12585 3105 50  0001 C CNN
+	1    12605 3005
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0102
+U 1 1 632045C2
+P 3245 4160
+F 0 "#PWR0102" H 3245 3910 50  0001 C CNN
+F 1 "GND" H 3250 3987 50  0000 C CNN
+F 2 "" H 3245 4160 50  0001 C CNN
+F 3 "" H 3245 4160 50  0001 C CNN
+	1    3245 4160
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0103
+U 1 1 63206366
+P 3245 2120
+F 0 "#PWR0103" H 3245 1970 50  0001 C CNN
+F 1 "+5V" H 3260 2293 50  0000 C CNN
+F 2 "" H 3245 2120 50  0001 C CNN
+F 3 "" H 3245 2120 50  0001 C CNN
+	1    3245 2120
+	1    0    0    -1  
+$EndComp
+Entry Wire Line
+	3315 2525 3415 2625
+Entry Wire Line
+	3315 3225 3415 3325
+Entry Wire Line
+	3315 3025 3415 3125
+Entry Wire Line
+	3315 2725 3415 2825
+Entry Wire Line
+	3415 3025 3315 2925
+Entry Wire Line
+	3415 3225 3315 3125
+Entry Wire Line
+	3415 2725 3315 2625
+Entry Wire Line
+	3415 2925 3315 2825
+Text Label 3315 2525 2    50   ~ 0
+d0
+Text Label 3315 3225 2    50   ~ 0
+d7
+Text Label 3315 3025 2    50   ~ 0
+d6
+Text Label 3315 2725 2    50   ~ 0
+d1
+Text Label 3315 2925 2    50   ~ 0
+d2
+Text Label 3315 3125 2    50   ~ 0
+d3
+Text Label 3315 2625 2    50   ~ 0
+d4
+Text Label 3315 2825 2    50   ~ 0
+d5
+$Comp
+L Connector:DB9_Male_MountingHoles CN1
+U 1 1 6320ECDF
+P 5800 1775
+F 0 "CN1" H 5979 1777 50  0000 L CNN
+F 1 "JOY1" H 5979 1686 50  0000 L CNN
+F 2 "Connector_Dsub:DSUB-9_Male_EdgeMount_P2.77mm" H 5800 1775 50  0001 C CNN
+F 3 " ~" H 5800 1775 50  0001 C CNN
+	1    5800 1775
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0104
+U 1 1 6321E89D
+P 5800 2460
+F 0 "#PWR0104" H 5800 2210 50  0001 C CNN
+F 1 "GND" H 5805 2287 50  0000 C CNN
+F 2 "" H 5800 2460 50  0001 C CNN
+F 3 "" H 5800 2460 50  0001 C CNN
+	1    5800 2460
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5800 2460 5800 2425
+NoConn ~ 6100 1475
+Wire Wire Line
+	6100 1675 6175 1675
+Wire Wire Line
+	6175 1675 6175 2425
+Wire Wire Line
+	6175 2425 5800 2425
+Connection ~ 5800 2425
+Wire Wire Line
+	5800 2425 5800 2375
+Wire Wire Line
+	6100 1875 6260 1875
+Wire Wire Line
+	6260 1875 6260 1375
+$Comp
+L power:+5V #PWR0105
+U 1 1 6323474C
+P 6260 925
+F 0 "#PWR0105" H 6260 775 50  0001 C CNN
+F 1 "+5V" H 6275 1098 50  0000 C CNN
+F 2 "" H 6260 925 50  0001 C CNN
+F 3 "" H 6260 925 50  0001 C CNN
+	1    6260 925 
+	1    0    0    -1  
+$EndComp
+Connection ~ 6260 980 
+Wire Wire Line
+	6260 980  6260 925 
+Wire Wire Line
+	6100 1375 6260 1375
+Connection ~ 6260 1375
+Wire Wire Line
+	6260 1375 6260 980 
+$Comp
+L Device:R_Network05 RN2
+U 1 1 632440D8
+P 6680 3880
+F 0 "RN2" H 6968 3926 50  0000 L CNN
+F 1 "4.7k" H 6968 3835 50  0000 L CNN
+F 2 "Resistor_THT:R_Array_SIP6" V 7055 3880 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/31509/csc.pdf" H 6680 3880 50  0001 C CNN
+F 4 "Bussed" H 6680 3880 50  0001 C CNN "Notes"
+	1    6680 3880
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0106
+U 1 1 6324445E
+P 5800 5100
+F 0 "#PWR0106" H 5800 4850 50  0001 C CNN
+F 1 "GND" H 5805 4927 50  0000 C CNN
+F 2 "" H 5800 5100 50  0001 C CNN
+F 3 "" H 5800 5100 50  0001 C CNN
+	1    5800 5100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5800 5100 5800 5065
+NoConn ~ 6100 4115
+Wire Wire Line
+	6100 4315 6175 4315
+Wire Wire Line
+	6175 4315 6175 5065
+Wire Wire Line
+	6175 5065 5800 5065
+Connection ~ 5800 5065
+Wire Wire Line
+	5800 5065 5800 5015
+Wire Wire Line
+	6100 4515 6260 4515
+Wire Wire Line
+	6260 4515 6260 4015
+$Comp
+L power:+5V #PWR0107
+U 1 1 63244476
+P 6260 3565
+F 0 "#PWR0107" H 6260 3415 50  0001 C CNN
+F 1 "+5V" H 6275 3738 50  0000 C CNN
+F 2 "" H 6260 3565 50  0001 C CNN
+F 3 "" H 6260 3565 50  0001 C CNN
+	1    6260 3565
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6260 3620 6480 3620
+Wire Wire Line
+	6480 3620 6480 3680
+Connection ~ 6260 3620
+Wire Wire Line
+	6260 3620 6260 3565
+Wire Wire Line
+	6100 4015 6260 4015
+Connection ~ 6260 4015
+Wire Wire Line
+	6260 4015 6260 3620
+$Comp
+L Device:R_Network05 RN3
+U 1 1 6324A96C
+P 6680 6645
+F 0 "RN3" H 6968 6691 50  0000 L CNN
+F 1 "4.7k" H 6968 6600 50  0000 L CNN
+F 2 "Resistor_THT:R_Array_SIP6" V 7055 6645 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/31509/csc.pdf" H 6680 6645 50  0001 C CNN
+F 4 "Bussed" H 6680 6645 50  0001 C CNN "Notes"
+	1    6680 6645
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:DB9_Male_MountingHoles CN3
+U 1 1 6324AD84
+P 5800 7180
+F 0 "CN3" H 5718 7872 50  0000 C CNN
+F 1 "JOY3" H 5718 7781 50  0000 C CNN
+F 2 "Connector_Dsub:DSUB-9_Male_EdgeMount_P2.77mm" H 5800 7180 50  0001 C CNN
+F 3 " ~" H 5800 7180 50  0001 C CNN
+	1    5800 7180
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0108
+U 1 1 6324AD8E
+P 5800 7865
+F 0 "#PWR0108" H 5800 7615 50  0001 C CNN
+F 1 "GND" H 5805 7692 50  0000 C CNN
+F 2 "" H 5800 7865 50  0001 C CNN
+F 3 "" H 5800 7865 50  0001 C CNN
+	1    5800 7865
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5800 7865 5800 7830
+NoConn ~ 6100 6880
+Wire Wire Line
+	6100 7080 6175 7080
+Wire Wire Line
+	6175 7080 6175 7830
+Wire Wire Line
+	6175 7830 5800 7830
+Connection ~ 5800 7830
+Wire Wire Line
+	5800 7830 5800 7780
+Wire Wire Line
+	6100 7280 6260 7280
+Wire Wire Line
+	6260 7280 6260 6780
+$Comp
+L power:+5V #PWR0109
+U 1 1 6324ADA6
+P 6260 6330
+F 0 "#PWR0109" H 6260 6180 50  0001 C CNN
+F 1 "+5V" H 6275 6503 50  0000 C CNN
+F 2 "" H 6260 6330 50  0001 C CNN
+F 3 "" H 6260 6330 50  0001 C CNN
+	1    6260 6330
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6260 6385 6480 6385
+Wire Wire Line
+	6480 6385 6480 6445
+Connection ~ 6260 6385
+Wire Wire Line
+	6260 6385 6260 6330
+Wire Wire Line
+	6100 6780 6260 6780
+Connection ~ 6260 6780
+Wire Wire Line
+	6260 6780 6260 6385
+$Comp
+L Device:R_Network05 RN4
+U 1 1 6324ADC6
+P 6675 9495
+F 0 "RN4" H 6963 9541 50  0000 L CNN
+F 1 "4.7k" H 6963 9450 50  0000 L CNN
+F 2 "Resistor_THT:R_Array_SIP6" V 7050 9495 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/31509/csc.pdf" H 6675 9495 50  0001 C CNN
+F 4 "Bussed" H 6675 9495 50  0001 C CNN "Notes"
+	1    6675 9495
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:DB9_Male_MountingHoles CN4
+U 1 1 6324ADD0
+P 5795 10030
+F 0 "CN4" H 5713 10722 50  0000 C CNN
+F 1 "JOY4" H 5713 10631 50  0000 C CNN
+F 2 "Connector_Dsub:DSUB-9_Male_EdgeMount_P2.77mm" H 5795 10030 50  0001 C CNN
+F 3 " ~" H 5795 10030 50  0001 C CNN
+	1    5795 10030
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0110
+U 1 1 6324ADDA
+P 5795 10715
+F 0 "#PWR0110" H 5795 10465 50  0001 C CNN
+F 1 "GND" H 5800 10542 50  0000 C CNN
+F 2 "" H 5795 10715 50  0001 C CNN
+F 3 "" H 5795 10715 50  0001 C CNN
+	1    5795 10715
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5795 10715 5795 10680
+NoConn ~ 6095 9730
+Wire Wire Line
+	6095 9930 6170 9930
+Wire Wire Line
+	6170 9930 6170 10680
+Wire Wire Line
+	6170 10680 5795 10680
+Connection ~ 5795 10680
+Wire Wire Line
+	5795 10680 5795 10630
+Wire Wire Line
+	6095 10130 6255 10130
+Wire Wire Line
+	6255 10130 6255 9630
+$Comp
+L power:+5V #PWR0111
+U 1 1 6324ADF2
+P 6255 9180
+F 0 "#PWR0111" H 6255 9030 50  0001 C CNN
+F 1 "+5V" H 6270 9353 50  0000 C CNN
+F 2 "" H 6255 9180 50  0001 C CNN
+F 3 "" H 6255 9180 50  0001 C CNN
+	1    6255 9180
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6255 9235 6475 9235
+Wire Wire Line
+	6475 9235 6475 9295
+Connection ~ 6255 9235
+Wire Wire Line
+	6255 9235 6255 9180
+Wire Wire Line
+	6095 9630 6255 9630
+Connection ~ 6255 9630
+Wire Wire Line
+	6255 9630 6255 9235
+$Comp
+L Device:R_Network05 RN5
+U 1 1 6325F3F4
+P 9900 1240
+F 0 "RN5" H 10188 1286 50  0000 L CNN
+F 1 "4.7k" H 10188 1195 50  0000 L CNN
+F 2 "Resistor_THT:R_Array_SIP6" V 10275 1240 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/31509/csc.pdf" H 9900 1240 50  0001 C CNN
+F 4 "Bussed" H 9900 1240 50  0001 C CNN "Notes"
+	1    9900 1240
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:DB9_Male_MountingHoles CN5
+U 1 1 6325F944
+P 9020 1775
+F 0 "CN5" H 8938 2467 50  0000 C CNN
+F 1 "JOY5" H 8938 2376 50  0000 C CNN
+F 2 "Connector_Dsub:DSUB-9_Male_EdgeMount_P2.77mm" H 9020 1775 50  0001 C CNN
+F 3 " ~" H 9020 1775 50  0001 C CNN
+	1    9020 1775
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0112
+U 1 1 6325F94E
+P 9020 2460
+F 0 "#PWR0112" H 9020 2210 50  0001 C CNN
+F 1 "GND" H 9025 2287 50  0000 C CNN
+F 2 "" H 9020 2460 50  0001 C CNN
+F 3 "" H 9020 2460 50  0001 C CNN
+	1    9020 2460
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9020 2460 9020 2425
+NoConn ~ 9320 1475
+Wire Wire Line
+	9320 1675 9395 1675
+Wire Wire Line
+	9395 1675 9395 2425
+Wire Wire Line
+	9395 2425 9020 2425
+Connection ~ 9020 2425
+Wire Wire Line
+	9020 2425 9020 2375
+Wire Wire Line
+	9320 1875 9480 1875
+Wire Wire Line
+	9480 1875 9480 1375
+$Comp
+L power:+5V #PWR0113
+U 1 1 6325F966
+P 9480 925
+F 0 "#PWR0113" H 9480 775 50  0001 C CNN
+F 1 "+5V" H 9495 1098 50  0000 C CNN
+F 2 "" H 9480 925 50  0001 C CNN
+F 3 "" H 9480 925 50  0001 C CNN
+	1    9480 925 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9480 980  9700 980 
+Wire Wire Line
+	9700 980  9700 1040
+Connection ~ 9480 980 
+Wire Wire Line
+	9480 980  9480 925 
+Wire Wire Line
+	9320 1375 9480 1375
+Connection ~ 9480 1375
+Wire Wire Line
+	9480 1375 9480 980 
+$Comp
+L Device:R_Network05 RN6
+U 1 1 6325F986
+P 9900 3880
+F 0 "RN6" H 10188 3926 50  0000 L CNN
+F 1 "4.7k" H 10188 3835 50  0000 L CNN
+F 2 "Resistor_THT:R_Array_SIP6" V 10275 3880 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/31509/csc.pdf" H 9900 3880 50  0001 C CNN
+F 4 "Bussed" H 9900 3880 50  0001 C CNN "Notes"
+	1    9900 3880
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:DB9_Male_MountingHoles CN6
+U 1 1 6325F990
+P 9020 4415
+F 0 "CN6" H 8938 5107 50  0000 C CNN
+F 1 "JOY6" H 8938 5016 50  0000 C CNN
+F 2 "Connector_Dsub:DSUB-9_Male_EdgeMount_P2.77mm" H 9020 4415 50  0001 C CNN
+F 3 " ~" H 9020 4415 50  0001 C CNN
+	1    9020 4415
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0114
+U 1 1 6325F99A
+P 9020 5100
+F 0 "#PWR0114" H 9020 4850 50  0001 C CNN
+F 1 "GND" H 9025 4927 50  0000 C CNN
+F 2 "" H 9020 5100 50  0001 C CNN
+F 3 "" H 9020 5100 50  0001 C CNN
+	1    9020 5100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9020 5100 9020 5065
+NoConn ~ 9320 4115
+Wire Wire Line
+	9320 4715 9700 4715
+Wire Wire Line
+	9320 4315 9395 4315
+Wire Wire Line
+	9395 4315 9395 5065
+Wire Wire Line
+	9395 5065 9020 5065
+Connection ~ 9020 5065
+Wire Wire Line
+	9020 5065 9020 5015
+Wire Wire Line
+	9320 4515 9480 4515
+Wire Wire Line
+	9480 4515 9480 4015
+$Comp
+L power:+5V #PWR0115
+U 1 1 6325F9B2
+P 9480 3565
+F 0 "#PWR0115" H 9480 3415 50  0001 C CNN
+F 1 "+5V" H 9495 3738 50  0000 C CNN
+F 2 "" H 9480 3565 50  0001 C CNN
+F 3 "" H 9480 3565 50  0001 C CNN
+	1    9480 3565
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9480 3620 9700 3620
+Wire Wire Line
+	9700 3620 9700 3680
+Connection ~ 9480 3620
+Wire Wire Line
+	9480 3620 9480 3565
+Wire Wire Line
+	9320 4015 9480 4015
+Connection ~ 9480 4015
+Wire Wire Line
+	9480 4015 9480 3620
+$Comp
+L Connector:DB9_Male_MountingHoles CN7
+U 1 1 6325F9DC
+P 9020 7180
+F 0 "CN7" H 8938 7872 50  0000 C CNN
+F 1 "JOY7" H 8938 7781 50  0000 C CNN
+F 2 "Connector_Dsub:DSUB-9_Male_EdgeMount_P2.77mm" H 9020 7180 50  0001 C CNN
+F 3 " ~" H 9020 7180 50  0001 C CNN
+	1    9020 7180
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0116
+U 1 1 6325F9E6
+P 9020 7865
+F 0 "#PWR0116" H 9020 7615 50  0001 C CNN
+F 1 "GND" H 9025 7692 50  0000 C CNN
+F 2 "" H 9020 7865 50  0001 C CNN
+F 3 "" H 9020 7865 50  0001 C CNN
+	1    9020 7865
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9020 7865 9020 7830
+NoConn ~ 9320 6880
+Wire Wire Line
+	9320 7080 9395 7080
+Wire Wire Line
+	9395 7080 9395 7830
+Wire Wire Line
+	9395 7830 9020 7830
+Connection ~ 9020 7830
+Wire Wire Line
+	9020 7830 9020 7780
+Wire Wire Line
+	9320 7280 9480 7280
+Wire Wire Line
+	9480 7280 9480 6780
+$Comp
+L power:+5V #PWR0117
+U 1 1 6325F9FE
+P 9480 6330
+F 0 "#PWR0117" H 9480 6180 50  0001 C CNN
+F 1 "+5V" H 9495 6503 50  0000 C CNN
+F 2 "" H 9480 6330 50  0001 C CNN
+F 3 "" H 9480 6330 50  0001 C CNN
+	1    9480 6330
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9480 6385 9700 6385
+Wire Wire Line
+	9700 6385 9700 6445
+Connection ~ 9480 6385
+Wire Wire Line
+	9480 6385 9480 6330
+Wire Wire Line
+	9320 6780 9480 6780
+Connection ~ 9480 6780
+Wire Wire Line
+	9480 6780 9480 6385
+$Comp
+L Device:R_Network05 RN8
+U 1 1 6325FA1E
+P 9895 9495
+F 0 "RN8" H 10183 9541 50  0000 L CNN
+F 1 "4.7k" H 10183 9450 50  0000 L CNN
+F 2 "Resistor_THT:R_Array_SIP6" V 10270 9495 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/31509/csc.pdf" H 9895 9495 50  0001 C CNN
+F 4 "Bussed" H 9895 9495 50  0001 C CNN "Notes"
+	1    9895 9495
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:DB9_Male_MountingHoles CN8
+U 1 1 6325FA28
+P 9015 10030
+F 0 "CN8" H 8933 10722 50  0000 C CNN
+F 1 "JOY8" H 8933 10631 50  0000 C CNN
+F 2 "Connector_Dsub:DSUB-9_Male_EdgeMount_P2.77mm" H 9015 10030 50  0001 C CNN
+F 3 " ~" H 9015 10030 50  0001 C CNN
+	1    9015 10030
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0118
+U 1 1 6325FA32
+P 9015 10715
+F 0 "#PWR0118" H 9015 10465 50  0001 C CNN
+F 1 "GND" H 9020 10542 50  0000 C CNN
+F 2 "" H 9015 10715 50  0001 C CNN
+F 3 "" H 9015 10715 50  0001 C CNN
+	1    9015 10715
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9015 10715 9015 10680
+NoConn ~ 9315 9730
+Wire Wire Line
+	9315 9930 9390 9930
+Wire Wire Line
+	9390 9930 9390 10680
+Wire Wire Line
+	9390 10680 9015 10680
+Connection ~ 9015 10680
+Wire Wire Line
+	9015 10680 9015 10630
+Wire Wire Line
+	9315 10130 9475 10130
+Wire Wire Line
+	9475 10130 9475 9630
+$Comp
+L power:+5V #PWR0119
+U 1 1 6325FA4A
+P 9475 9180
+F 0 "#PWR0119" H 9475 9030 50  0001 C CNN
+F 1 "+5V" H 9490 9353 50  0000 C CNN
+F 2 "" H 9475 9180 50  0001 C CNN
+F 3 "" H 9475 9180 50  0001 C CNN
+	1    9475 9180
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9475 9235 9695 9235
+Wire Wire Line
+	9695 9235 9695 9295
+Connection ~ 9475 9235
+Wire Wire Line
+	9475 9235 9475 9180
+Wire Wire Line
+	9315 9630 9475 9630
+Connection ~ 9475 9630
+Wire Wire Line
+	9475 9630 9475 9235
+Wire Wire Line
+	12705 3705 12705 3805
+Wire Wire Line
+	12705 3805 12655 3805
+Wire Wire Line
+	12605 3805 12605 3705
+Wire Wire Line
+	12655 3805 12655 3880
+Connection ~ 12655 3805
+Wire Wire Line
+	12655 3805 12605 3805
+$Comp
+L power:GND #PWR0120
+U 1 1 632AF1FC
+P 12655 3880
+F 0 "#PWR0120" H 12655 3630 50  0001 C CNN
+F 1 "GND" H 12743 3843 50  0000 L CNN
+F 2 "" H 12655 3880 50  0001 C CNN
+F 3 "" H 12655 3880 50  0001 C CNN
+	1    12655 3880
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	12505 2305 12505 2230
+$Comp
+L power:+5V #PWR0121
+U 1 1 632BC1BB
+P 12505 2230
+F 0 "#PWR0121" H 12505 2080 50  0001 C CNN
+F 1 "+5V" H 12520 2403 50  0000 C CNN
+F 2 "" H 12505 2230 50  0001 C CNN
+F 3 "" H 12505 2230 50  0001 C CNN
+	1    12505 2230
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	13105 2505 13245 2505
+Wire Wire Line
+	13105 2605 13245 2605
+Wire Wire Line
+	13105 2705 13245 2705
+Entry Wire Line
+	13345 2405 13245 2505
+Entry Wire Line
+	13345 2505 13245 2605
+Entry Wire Line
+	13345 2605 13245 2705
+Wire Wire Line
+	13105 3005 13245 3005
+Wire Wire Line
+	13245 3005 13245 3805
+Wire Wire Line
+	13245 3805 12705 3805
+Connection ~ 12705 3805
+Wire Bus Line
+	13345 2405 13685 2405
+$Comp
+L Connector:DB9_Male_MountingHoles CN2
+U 1 1 63244454
+P 5800 4415
+F 0 "CN2" H 5718 5107 50  0000 C CNN
+F 1 "JOY2" H 5718 5016 50  0000 C CNN
+F 2 "Connector_Dsub:DSUB-9_Male_EdgeMount_P2.77mm" H 5800 4415 50  0001 C CNN
+F 3 " ~" H 5800 4415 50  0001 C CNN
+	1    5800 4415
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	7325 2175 7325 2805
+Wire Wire Line
+	7325 2805 12105 2805
+Wire Wire Line
+	7325 4815 7325 2905
+Wire Wire Line
+	7325 2905 12105 2905
+Wire Wire Line
+	7435 7580 7435 3005
+Wire Wire Line
+	7435 3005 12105 3005
+Wire Wire Line
+	7540 10430 7540 3105
+Wire Wire Line
+	7540 3105 12105 3105
+Wire Wire Line
+	10250 2175 10250 3205
+Wire Wire Line
+	10250 3205 12105 3205
+Wire Wire Line
+	10370 4815 10370 3305
+Wire Wire Line
+	10370 3305 12105 3305
+Wire Wire Line
+	12105 3405 10485 3405
+Wire Wire Line
+	10485 3405 10485 7580
+Wire Wire Line
+	10590 10430 10590 3505
+Wire Wire Line
+	10590 3505 12105 3505
+Text Label 13245 2605 2    50   ~ 0
+d6
+Text Label 13245 2705 2    50   ~ 0
+d7
+Wire Wire Line
+	13105 2905 13245 2905
+Entry Wire Line
+	13345 2805 13245 2905
+Text Label 13245 2905 2    50   ~ 0
+d0
+Text Label 13245 2505 2    50   ~ 0
+d5
+Text Label 13685 2405 2    50   ~ 0
+data_bus
+$Comp
+L Analog_Switch:CD4051B U2
+U 1 1 63497199
+P 12605 5660
+F 0 "U2" H 12920 6315 50  0000 C CNN
+F 1 "CD4051B" H 12860 4995 50  0000 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm_Socket_LongPads" H 12755 4910 50  0001 L CNN
+F 3 "http://www.ti.com/lit/ds/symlink/cd4052b.pdf" H 12585 5760 50  0001 C CNN
+	1    12605 5660
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	12705 6360 12705 6460
+Wire Wire Line
+	12705 6460 12655 6460
+Wire Wire Line
+	12605 6460 12605 6360
+Wire Wire Line
+	12655 6460 12655 6535
+Connection ~ 12655 6460
+Wire Wire Line
+	12655 6460 12605 6460
+$Comp
+L power:GND #PWR0122
+U 1 1 634977E9
+P 12655 6535
+F 0 "#PWR0122" H 12655 6285 50  0001 C CNN
+F 1 "GND" H 12660 6362 50  0000 C CNN
+F 2 "" H 12655 6535 50  0001 C CNN
+F 3 "" H 12655 6535 50  0001 C CNN
+	1    12655 6535
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	12505 4960 12505 4885
+$Comp
+L power:+5V #PWR0123
+U 1 1 634977F4
+P 12505 4885
+F 0 "#PWR0123" H 12505 4735 50  0001 C CNN
+F 1 "+5V" H 12593 4922 50  0000 L CNN
+F 2 "" H 12505 4885 50  0001 C CNN
+F 3 "" H 12505 4885 50  0001 C CNN
+	1    12505 4885
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	13105 5160 13245 5160
+Wire Wire Line
+	13105 5260 13245 5260
+Wire Wire Line
+	13105 5360 13245 5360
+Entry Wire Line
+	13345 5060 13245 5160
+Entry Wire Line
+	13345 5160 13245 5260
+Entry Wire Line
+	13345 5260 13245 5360
+Wire Wire Line
+	13105 5660 13245 5660
+Wire Wire Line
+	13245 5660 13245 6460
+Wire Wire Line
+	13245 6460 12705 6460
+Connection ~ 12705 6460
+Wire Bus Line
+	13345 5060 13685 5060
+Text Label 13245 5260 2    50   ~ 0
+d6
+Text Label 13245 5360 2    50   ~ 0
+d7
+Wire Wire Line
+	13105 5560 13245 5560
+Entry Wire Line
+	13345 5460 13245 5560
+Text Label 13245 5560 2    50   ~ 0
+d1
+Text Label 13245 5160 2    50   ~ 0
+d5
+Text Label 13685 5060 2    50   ~ 0
+data_bus
+$Comp
+L Analog_Switch:CD4051B U3
+U 1 1 634AED8E
+P 12605 8410
+F 0 "U3" H 12920 9065 50  0000 C CNN
+F 1 "CD4051B" H 12860 7745 50  0000 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm_Socket_LongPads" H 12755 7660 50  0001 L CNN
+F 3 "http://www.ti.com/lit/ds/symlink/cd4052b.pdf" H 12585 8510 50  0001 C CNN
+	1    12605 8410
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	12705 9110 12705 9210
+Wire Wire Line
+	12705 9210 12655 9210
+Wire Wire Line
+	12605 9210 12605 9110
+Wire Wire Line
+	12655 9210 12655 9285
+Connection ~ 12655 9210
+Wire Wire Line
+	12655 9210 12605 9210
+$Comp
+L power:GND #PWR0124
+U 1 1 634AF46C
+P 12655 9285
+F 0 "#PWR0124" H 12655 9035 50  0001 C CNN
+F 1 "GND" H 12660 9112 50  0000 C CNN
+F 2 "" H 12655 9285 50  0001 C CNN
+F 3 "" H 12655 9285 50  0001 C CNN
+	1    12655 9285
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	12505 7710 12505 7635
+$Comp
+L power:+5V #PWR0125
+U 1 1 634AF477
+P 12505 7635
+F 0 "#PWR0125" H 12505 7485 50  0001 C CNN
+F 1 "+5V" H 12593 7672 50  0000 L CNN
+F 2 "" H 12505 7635 50  0001 C CNN
+F 3 "" H 12505 7635 50  0001 C CNN
+	1    12505 7635
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	13105 7910 13245 7910
+Wire Wire Line
+	13105 8010 13245 8010
+Wire Wire Line
+	13105 8110 13245 8110
+Entry Wire Line
+	13345 7810 13245 7910
+Entry Wire Line
+	13345 7910 13245 8010
+Entry Wire Line
+	13345 8010 13245 8110
+Wire Wire Line
+	13105 8410 13245 8410
+Wire Wire Line
+	13245 8410 13245 9210
+Wire Wire Line
+	13245 9210 12705 9210
+Connection ~ 12705 9210
+Wire Bus Line
+	13345 7810 13685 7810
+Text Label 13245 8010 2    50   ~ 0
+d6
+Text Label 13245 8110 2    50   ~ 0
+d7
+Wire Wire Line
+	13105 8310 13245 8310
+Entry Wire Line
+	13345 8210 13245 8310
+Text Label 13245 8310 2    50   ~ 0
+d2
+Text Label 13245 7910 2    50   ~ 0
+d5
+Text Label 13685 7810 2    50   ~ 0
+data_bus
+Wire Wire Line
+	7650 1975 7650 5460
+Wire Wire Line
+	7650 5460 12105 5460
+Wire Wire Line
+	7750 4615 7750 5560
+Wire Wire Line
+	7750 5560 12105 5560
+Wire Wire Line
+	7650 7380 7650 5660
+Wire Wire Line
+	7650 5660 12105 5660
+Wire Wire Line
+	12105 5760 7750 5760
+Wire Wire Line
+	7750 5760 7750 10230
+Wire Wire Line
+	10685 1975 10685 5860
+Wire Wire Line
+	10685 5860 12105 5860
+Wire Wire Line
+	12105 5960 10780 5960
+Wire Wire Line
+	10780 5960 10780 4615
+Wire Wire Line
+	10685 7380 10685 6060
+Wire Wire Line
+	10685 6060 12105 6060
+Wire Wire Line
+	12105 6160 10780 6160
+Wire Wire Line
+	10780 6160 10780 10230
+Wire Wire Line
+	7850 1775 7850 8210
+Wire Wire Line
+	7850 8210 12105 8210
+Wire Wire Line
+	12105 8310 7950 8310
+Wire Wire Line
+	7950 8310 7950 4415
+Wire Wire Line
+	12105 8410 8045 8410
+Wire Wire Line
+	8045 8410 8045 7180
+Wire Wire Line
+	7850 10030 7850 8510
+Wire Wire Line
+	7850 8510 12105 8510
+Wire Wire Line
+	10875 1775 10875 8610
+Wire Wire Line
+	10875 8610 12105 8610
+Wire Wire Line
+	10975 4415 10975 8710
+Wire Wire Line
+	10975 8710 12105 8710
+Wire Wire Line
+	12105 8810 11075 8810
+Wire Wire Line
+	11075 8810 11075 7180
+Wire Wire Line
+	12105 8910 10875 8910
+Wire Wire Line
+	10875 8910 10875 10030
+$Comp
+L Analog_Switch:CD4051B U4
+U 1 1 63121140
+P 14530 4230
+F 0 "U4" H 14845 4885 50  0000 C CNN
+F 1 "CD4051B" H 14785 3565 50  0000 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm_Socket_LongPads" H 14680 3480 50  0001 L CNN
+F 3 "http://www.ti.com/lit/ds/symlink/cd4052b.pdf" H 14510 4330 50  0001 C CNN
+	1    14530 4230
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	14630 4930 14630 5030
+Wire Wire Line
+	14630 5030 14580 5030
+Wire Wire Line
+	14530 5030 14530 4930
+Wire Wire Line
+	14580 5030 14580 5105
+Connection ~ 14580 5030
+Wire Wire Line
+	14580 5030 14530 5030
+$Comp
+L power:GND #PWR0126
+U 1 1 631218AC
+P 14580 5105
+F 0 "#PWR0126" H 14580 4855 50  0001 C CNN
+F 1 "GND" H 14585 4932 50  0000 C CNN
+F 2 "" H 14580 5105 50  0001 C CNN
+F 3 "" H 14580 5105 50  0001 C CNN
+	1    14580 5105
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	14430 3530 14430 3455
+$Comp
+L power:+5V #PWR0127
+U 1 1 631218B7
+P 14430 3455
+F 0 "#PWR0127" H 14430 3305 50  0001 C CNN
+F 1 "+5V" H 14445 3628 50  0000 C CNN
+F 2 "" H 14430 3455 50  0001 C CNN
+F 3 "" H 14430 3455 50  0001 C CNN
+	1    14430 3455
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	15030 3730 15170 3730
+Wire Wire Line
+	15030 3830 15170 3830
+Wire Wire Line
+	15030 3930 15170 3930
+Entry Wire Line
+	15270 3630 15170 3730
+Entry Wire Line
+	15270 3730 15170 3830
+Entry Wire Line
+	15270 3830 15170 3930
+Wire Wire Line
+	15030 4230 15170 4230
+Wire Wire Line
+	15170 4230 15170 5030
+Wire Wire Line
+	15170 5030 14630 5030
+Connection ~ 14630 5030
+Wire Bus Line
+	15270 3630 15610 3630
+Text Label 15170 3830 2    50   ~ 0
+d6
+Text Label 15170 3930 2    50   ~ 0
+d7
+Wire Wire Line
+	15030 4130 15170 4130
+Entry Wire Line
+	15270 4030 15170 4130
+Text Label 15170 4130 2    50   ~ 0
+d3
+Text Label 15170 3730 2    50   ~ 0
+d5
+Text Label 15610 3630 2    50   ~ 0
+data_bus
+$Comp
+L Analog_Switch:CD4051B U5
+U 1 1 6315E2F4
+P 14530 6960
+F 0 "U5" H 14845 7615 50  0000 C CNN
+F 1 "CD4051B" H 14785 6295 50  0000 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm_Socket_LongPads" H 14680 6210 50  0001 L CNN
+F 3 "http://www.ti.com/lit/ds/symlink/cd4052b.pdf" H 14510 7060 50  0001 C CNN
+	1    14530 6960
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	14630 7660 14630 7760
+Wire Wire Line
+	14630 7760 14580 7760
+Wire Wire Line
+	14530 7760 14530 7660
+Wire Wire Line
+	14580 7760 14580 7835
+Connection ~ 14580 7760
+Wire Wire Line
+	14580 7760 14530 7760
+$Comp
+L power:GND #PWR0128
+U 1 1 6315EAEE
+P 14580 7835
+F 0 "#PWR0128" H 14580 7585 50  0001 C CNN
+F 1 "GND" H 14585 7662 50  0000 C CNN
+F 2 "" H 14580 7835 50  0001 C CNN
+F 3 "" H 14580 7835 50  0001 C CNN
+	1    14580 7835
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	14430 6260 14430 6185
+$Comp
+L power:+5V #PWR0129
+U 1 1 6315EAF9
+P 14430 6185
+F 0 "#PWR0129" H 14430 6035 50  0001 C CNN
+F 1 "+5V" H 14445 6358 50  0000 C CNN
+F 2 "" H 14430 6185 50  0001 C CNN
+F 3 "" H 14430 6185 50  0001 C CNN
+	1    14430 6185
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	15030 6460 15170 6460
+Wire Wire Line
+	15030 6560 15170 6560
+Wire Wire Line
+	15030 6660 15170 6660
+Entry Wire Line
+	15270 6360 15170 6460
+Entry Wire Line
+	15270 6460 15170 6560
+Entry Wire Line
+	15270 6560 15170 6660
+Wire Wire Line
+	15030 6960 15170 6960
+Wire Wire Line
+	15170 6960 15170 7760
+Wire Wire Line
+	15170 7760 14630 7760
+Connection ~ 14630 7760
+Wire Bus Line
+	15270 6360 15610 6360
+Text Label 15170 6560 2    50   ~ 0
+d6
+Text Label 15170 6660 2    50   ~ 0
+d7
+Wire Wire Line
+	15030 6860 15170 6860
+Entry Wire Line
+	15270 6760 15170 6860
+Text Label 15170 6860 2    50   ~ 0
+d4
+Text Label 15170 6460 2    50   ~ 0
+d5
+Text Label 15610 6360 2    50   ~ 0
+data_bus
+Wire Wire Line
+	7945 1575 7945 3205
+Wire Wire Line
+	7945 3205 10145 3205
+Wire Wire Line
+	10145 3205 10145 3615
+Wire Wire Line
+	10145 3615 10975 3615
+Wire Wire Line
+	10975 3615 10975 4030
+Wire Wire Line
+	10975 4030 14030 4030
+Wire Wire Line
+	8060 4215 8060 5355
+Wire Wire Line
+	8060 5355 11075 5355
+Wire Wire Line
+	11075 5355 11075 4130
+Wire Wire Line
+	11075 4130 14030 4130
+Wire Wire Line
+	8045 6980 8045 5860
+Wire Wire Line
+	8045 5860 10370 5860
+Wire Wire Line
+	10370 5860 10370 4920
+Wire Wire Line
+	10370 4920 11170 4920
+Wire Wire Line
+	11170 4920 11170 4230
+Wire Wire Line
+	11170 4230 14030 4230
+Wire Wire Line
+	8145 9830 8145 5960
+Wire Wire Line
+	8145 5960 10255 5960
+Wire Wire Line
+	10255 5960 10255 5020
+Wire Wire Line
+	10255 5020 11260 5020
+Wire Wire Line
+	11260 5020 11260 4330
+Wire Wire Line
+	11260 4330 14030 4330
+Wire Wire Line
+	11345 1575 11345 4430
+Wire Wire Line
+	11345 4430 14030 4430
+Wire Wire Line
+	10255 4215 10255 4530
+Wire Wire Line
+	10255 4530 14030 4530
+Wire Wire Line
+	11345 6980 11345 4630
+Wire Wire Line
+	11345 4630 14030 4630
+Wire Wire Line
+	11435 9830 11435 4730
+Wire Wire Line
+	11435 4730 14030 4730
+Wire Wire Line
+	8245 2075 8245 6265
+Wire Wire Line
+	8245 6265 11075 6265
+Wire Wire Line
+	11075 6265 11075 6760
+Wire Wire Line
+	11075 6760 14030 6760
+Wire Wire Line
+	8350 4715 8350 6160
+Wire Wire Line
+	8350 6160 10370 6160
+Wire Wire Line
+	10370 6160 10370 6860
+Wire Wire Line
+	10370 6860 14030 6860
+Wire Wire Line
+	8245 7480 8245 8105
+Wire Wire Line
+	8245 8105 11535 8105
+Wire Wire Line
+	11535 8105 11535 6960
+Wire Wire Line
+	11535 6960 14030 6960
+Wire Wire Line
+	8350 10330 8350 8000
+Wire Wire Line
+	8350 8000 11170 8000
+Wire Wire Line
+	11170 8000 11170 7060
+Wire Wire Line
+	11170 7060 14030 7060
+Wire Wire Line
+	11630 2075 11630 7160
+Wire Wire Line
+	11630 7160 14030 7160
+Wire Wire Line
+	14030 7260 11260 7260
+Wire Wire Line
+	11260 7260 11260 5120
+Wire Wire Line
+	11260 7480 11260 7360
+Wire Wire Line
+	11260 7360 14030 7360
+Wire Wire Line
+	11345 10330 11345 7460
+Wire Wire Line
+	11345 7460 14030 7460
+$Comp
+L power:+5V #PWR01
+U 1 1 63544C80
+P 2430 5650
+F 0 "#PWR01" H 2430 5500 50  0001 C CNN
+F 1 "+5V" H 2445 5823 50  0000 C CNN
+F 2 "" H 2430 5650 50  0001 C CNN
+F 3 "" H 2430 5650 50  0001 C CNN
+	1    2430 5650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 635454DA
+P 2430 5885
+F 0 "C1" H 2545 5931 50  0000 L CNN
+F 1 "100n" H 2545 5840 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D7.0mm_W2.5mm_P5.00mm" H 2468 5735 50  0001 C CNN
+F 3 "~" H 2430 5885 50  0001 C CNN
+	1    2430 5885
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2430 5735 2430 5650
+Wire Wire Line
+	2430 6120 2430 6035
+$Comp
+L power:GND #PWR06
+U 1 1 635B9B6D
+P 2430 6120
+F 0 "#PWR06" H 2430 5870 50  0001 C CNN
+F 1 "GND" H 2435 5947 50  0000 C CNN
+F 2 "" H 2430 6120 50  0001 C CNN
+F 3 "" H 2430 6120 50  0001 C CNN
+	1    2430 6120
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR02
+U 1 1 635BA3A3
+P 2865 5650
+F 0 "#PWR02" H 2865 5500 50  0001 C CNN
+F 1 "+5V" H 2880 5823 50  0000 C CNN
+F 2 "" H 2865 5650 50  0001 C CNN
+F 3 "" H 2865 5650 50  0001 C CNN
+	1    2865 5650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C2
+U 1 1 635BABF1
+P 2865 5885
+F 0 "C2" H 2980 5931 50  0000 L CNN
+F 1 "100n" H 2980 5840 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D7.0mm_W2.5mm_P5.00mm" H 2903 5735 50  0001 C CNN
+F 3 "~" H 2865 5885 50  0001 C CNN
+	1    2865 5885
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2865 5735 2865 5650
+Wire Wire Line
+	2865 6120 2865 6035
+$Comp
+L power:GND #PWR07
+U 1 1 635BABFD
+P 2865 6120
+F 0 "#PWR07" H 2865 5870 50  0001 C CNN
+F 1 "GND" H 2870 5947 50  0000 C CNN
+F 2 "" H 2865 6120 50  0001 C CNN
+F 3 "" H 2865 6120 50  0001 C CNN
+	1    2865 6120
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR03
+U 1 1 635E2385
+P 3315 5650
+F 0 "#PWR03" H 3315 5500 50  0001 C CNN
+F 1 "+5V" H 3330 5823 50  0000 C CNN
+F 2 "" H 3315 5650 50  0001 C CNN
+F 3 "" H 3315 5650 50  0001 C CNN
+	1    3315 5650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C3
+U 1 1 635E2C01
+P 3315 5885
+F 0 "C3" H 3430 5931 50  0000 L CNN
+F 1 "100n" H 3430 5840 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D7.0mm_W2.5mm_P5.00mm" H 3353 5735 50  0001 C CNN
+F 3 "~" H 3315 5885 50  0001 C CNN
+	1    3315 5885
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3315 5735 3315 5650
+Wire Wire Line
+	3315 6120 3315 6035
+$Comp
+L power:GND #PWR08
+U 1 1 635E2C0D
+P 3315 6120
+F 0 "#PWR08" H 3315 5870 50  0001 C CNN
+F 1 "GND" H 3320 5947 50  0000 C CNN
+F 2 "" H 3315 6120 50  0001 C CNN
+F 3 "" H 3315 6120 50  0001 C CNN
+	1    3315 6120
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR04
+U 1 1 635E2C17
+P 3750 5650
+F 0 "#PWR04" H 3750 5500 50  0001 C CNN
+F 1 "+5V" H 3765 5823 50  0000 C CNN
+F 2 "" H 3750 5650 50  0001 C CNN
+F 3 "" H 3750 5650 50  0001 C CNN
+	1    3750 5650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C4
+U 1 1 635E2C21
+P 3750 5885
+F 0 "C4" H 3865 5931 50  0000 L CNN
+F 1 "100n" H 3865 5840 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D7.0mm_W2.5mm_P5.00mm" H 3788 5735 50  0001 C CNN
+F 3 "~" H 3750 5885 50  0001 C CNN
+	1    3750 5885
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3750 5735 3750 5650
+Wire Wire Line
+	3750 6120 3750 6035
+$Comp
+L power:GND #PWR09
+U 1 1 635E2C2D
+P 3750 6120
+F 0 "#PWR09" H 3750 5870 50  0001 C CNN
+F 1 "GND" H 3755 5947 50  0000 C CNN
+F 2 "" H 3750 6120 50  0001 C CNN
+F 3 "" H 3750 6120 50  0001 C CNN
+	1    3750 6120
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR05
+U 1 1 6360C229
+P 4190 5650
+F 0 "#PWR05" H 4190 5500 50  0001 C CNN
+F 1 "+5V" H 4205 5823 50  0000 C CNN
+F 2 "" H 4190 5650 50  0001 C CNN
+F 3 "" H 4190 5650 50  0001 C CNN
+	1    4190 5650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C5
+U 1 1 6360CB01
+P 4190 5885
+F 0 "C5" H 4305 5931 50  0000 L CNN
+F 1 "100n" H 4305 5840 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D7.0mm_W2.5mm_P5.00mm" H 4228 5735 50  0001 C CNN
+F 3 "~" H 4190 5885 50  0001 C CNN
+	1    4190 5885
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4190 5735 4190 5650
+Wire Wire Line
+	4190 6120 4190 6035
+$Comp
+L power:GND #PWR010
+U 1 1 6360CB0D
+P 4190 6120
+F 0 "#PWR010" H 4190 5870 50  0001 C CNN
+F 1 "GND" H 4195 5947 50  0000 C CNN
+F 2 "" H 4190 6120 50  0001 C CNN
+F 3 "" H 4190 6120 50  0001 C CNN
+	1    4190 6120
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR011
+U 1 1 63663FA6
+P 1985 5650
+F 0 "#PWR011" H 1985 5500 50  0001 C CNN
+F 1 "+5V" H 2000 5823 50  0000 C CNN
+F 2 "" H 1985 5650 50  0001 C CNN
+F 3 "" H 1985 5650 50  0001 C CNN
+	1    1985 5650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1985 5735 1985 5650
+Wire Wire Line
+	1985 6120 1985 6035
+$Comp
+L power:GND #PWR012
+U 1 1 636648B8
+P 1985 6120
+F 0 "#PWR012" H 1985 5870 50  0001 C CNN
+F 1 "GND" H 1990 5947 50  0000 C CNN
+F 2 "" H 1985 6120 50  0001 C CNN
+F 3 "" H 1985 6120 50  0001 C CNN
+	1    1985 6120
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP1 C6
+U 1 1 63690C73
+P 1985 5885
+F 0 "C6" H 2100 5931 50  0000 L CNN
+F 1 "100u" H 2100 5840 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm" H 1985 5885 50  0001 C CNN
+F 3 "~" H 1985 5885 50  0001 C CNN
+	1    1985 5885
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:DB15_Female_MountingHoles CN9
+U 1 1 636CDFF8
+P 1915 3025
+F 0 "CN9" H 1821 4017 50  0000 C CNN
+F 1 "DB15F" H 1821 3926 50  0000 C CNN
+F 2 "Connector_Dsub:DSUB-15_Female_EdgeMount_P2.77mm" H 1915 3025 50  0001 C CNN
+F 3 " ~" H 1915 3025 50  0001 C CNN
+	1    1915 3025
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	3245 2120 3245 2325
+Wire Wire Line
+	2215 2425 3245 2425
+Wire Wire Line
+	3245 2425 3245 2325
+Connection ~ 3245 2325
+Wire Wire Line
+	2215 3625 3245 3625
+Wire Wire Line
+	3245 3625 3245 3725
+Wire Wire Line
+	2215 3725 3245 3725
+Connection ~ 3245 3725
+Wire Wire Line
+	3245 3725 3245 4050
+Wire Wire Line
+	1915 3925 1915 4050
+Wire Wire Line
+	1915 4050 3245 4050
+Connection ~ 3245 4050
+Wire Wire Line
+	3245 4050 3245 4160
+Wire Wire Line
+	2215 2525 2490 2525
+Wire Bus Line
+	3415 4050 3875 4050
+Text Label 3875 4050 2    50   ~ 0
+data_bus
+Wire Wire Line
+	2215 2625 2490 2625
+Wire Wire Line
+	2215 2725 2490 2725
+Wire Wire Line
+	2215 2825 3315 2825
+Wire Wire Line
+	2215 2925 2490 2925
+Wire Wire Line
+	2215 3025 3315 3025
+Wire Wire Line
+	2215 3125 2490 3125
+Wire Wire Line
+	2215 3225 3315 3225
+Wire Wire Line
+	2215 3325 3315 3325
+NoConn ~ 2215 3425
+NoConn ~ 2215 3525
+Text Label 3315 3325 2    50   ~ 0
+~reset
+Wire Wire Line
+	6260 980  6480 980 
+Wire Wire Line
+	6100 4815 6880 4815
+Wire Wire Line
+	6100 4615 6780 4615
+Wire Wire Line
+	6100 4415 6680 4415
+Wire Wire Line
+	6100 4715 6480 4715
+Wire Wire Line
+	6100 4215 6580 4215
+Wire Wire Line
+	6880 4080 6880 4815
+Connection ~ 6880 4815
+Wire Wire Line
+	6880 4815 7325 4815
+Wire Wire Line
+	6780 4080 6780 4615
+Connection ~ 6780 4615
+Wire Wire Line
+	6780 4615 7750 4615
+Wire Wire Line
+	6680 4080 6680 4415
+Connection ~ 6680 4415
+Wire Wire Line
+	6680 4415 7950 4415
+Wire Wire Line
+	6580 4080 6580 4215
+Connection ~ 6580 4215
+Wire Wire Line
+	6580 4215 8060 4215
+Wire Wire Line
+	6480 4080 6480 4715
+Connection ~ 6480 4715
+Wire Wire Line
+	6480 4715 8350 4715
+Wire Wire Line
+	6100 7580 6880 7580
+Wire Wire Line
+	6100 7380 6780 7380
+Wire Wire Line
+	6100 7180 6680 7180
+Wire Wire Line
+	6100 6980 6580 6980
+Wire Wire Line
+	6100 7480 6480 7480
+Wire Wire Line
+	6880 6845 6880 7580
+Connection ~ 6880 7580
+Wire Wire Line
+	6880 7580 7435 7580
+Wire Wire Line
+	6780 6845 6780 7380
+Connection ~ 6780 7380
+Wire Wire Line
+	6780 7380 7650 7380
+Wire Wire Line
+	6680 6845 6680 7180
+Connection ~ 6680 7180
+Wire Wire Line
+	6680 7180 8045 7180
+Wire Wire Line
+	6580 6845 6580 6980
+Connection ~ 6580 6980
+Wire Wire Line
+	6580 6980 8045 6980
+Wire Wire Line
+	6480 6845 6480 7480
+Connection ~ 6480 7480
+Wire Wire Line
+	6480 7480 8245 7480
+Wire Wire Line
+	6095 10430 6875 10430
+Wire Wire Line
+	6095 10230 6775 10230
+Wire Wire Line
+	6095 10030 6675 10030
+Wire Wire Line
+	6095 9830 6575 9830
+Wire Wire Line
+	6095 10330 6475 10330
+Wire Wire Line
+	6875 9695 6875 10430
+Connection ~ 6875 10430
+Wire Wire Line
+	6875 10430 7540 10430
+Wire Wire Line
+	6775 9695 6775 10230
+Connection ~ 6775 10230
+Wire Wire Line
+	6775 10230 7750 10230
+Wire Wire Line
+	6675 9695 6675 10030
+Connection ~ 6675 10030
+Wire Wire Line
+	6675 10030 7850 10030
+Wire Wire Line
+	6575 9695 6575 9830
+Connection ~ 6575 9830
+Wire Wire Line
+	6575 9830 8145 9830
+Wire Wire Line
+	6475 9695 6475 10330
+Connection ~ 6475 10330
+Wire Wire Line
+	6475 10330 8350 10330
+Wire Wire Line
+	6100 2175 6880 2175
+Wire Wire Line
+	6100 1975 6780 1975
+Wire Wire Line
+	6100 1775 6680 1775
+Wire Wire Line
+	6100 1575 6580 1575
+Wire Wire Line
+	6100 2075 6480 2075
+Wire Wire Line
+	6480 1040 6480 980 
+$Comp
+L Device:R_Network05 RN1
+U 1 1 6320D64B
+P 6680 1240
+F 0 "RN1" H 6968 1286 50  0000 L CNN
+F 1 "4.7k" H 6968 1195 50  0000 L CNN
+F 2 "Resistor_THT:R_Array_SIP6" V 7055 1240 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/31509/csc.pdf" H 6680 1240 50  0001 C CNN
+F 4 "Bussed" H 6680 1240 50  0001 C CNN "Notes"
+	1    6680 1240
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6880 1440 6880 2175
+Connection ~ 6880 2175
+Wire Wire Line
+	6880 2175 7325 2175
+Wire Wire Line
+	6780 1440 6780 1975
+Connection ~ 6780 1975
+Wire Wire Line
+	6780 1975 7650 1975
+Wire Wire Line
+	6680 1440 6680 1775
+Connection ~ 6680 1775
+Wire Wire Line
+	6680 1775 7850 1775
+Wire Wire Line
+	6580 1440 6580 1575
+Connection ~ 6580 1575
+Wire Wire Line
+	6580 1575 7945 1575
+Wire Wire Line
+	6480 1440 6480 2075
+Connection ~ 6480 2075
+Wire Wire Line
+	6480 2075 8245 2075
+Wire Wire Line
+	9320 2175 10100 2175
+Wire Wire Line
+	9320 1975 10000 1975
+Wire Wire Line
+	9320 1775 9900 1775
+Wire Wire Line
+	9320 1575 9800 1575
+Wire Wire Line
+	9320 2075 9700 2075
+Wire Wire Line
+	10100 1440 10100 2175
+Connection ~ 10100 2175
+Wire Wire Line
+	10100 2175 10250 2175
+Wire Wire Line
+	10000 1440 10000 1975
+Connection ~ 10000 1975
+Wire Wire Line
+	10000 1975 10685 1975
+Wire Wire Line
+	9900 1440 9900 1775
+Connection ~ 9900 1775
+Wire Wire Line
+	9900 1775 10875 1775
+Wire Wire Line
+	9800 1440 9800 1575
+Connection ~ 9800 1575
+Wire Wire Line
+	9800 1575 11345 1575
+Wire Wire Line
+	9700 1440 9700 2075
+Connection ~ 9700 2075
+Wire Wire Line
+	9700 2075 11630 2075
+Wire Wire Line
+	9320 4815 10100 4815
+Wire Wire Line
+	9320 4615 10000 4615
+Wire Wire Line
+	9320 4415 9900 4415
+Wire Wire Line
+	9320 4215 9800 4215
+Wire Wire Line
+	9700 4080 9700 4715
+Connection ~ 9700 4715
+Wire Wire Line
+	9700 4715 9700 5120
+Wire Wire Line
+	9700 5120 11260 5120
+Wire Wire Line
+	10100 4080 10100 4815
+Connection ~ 10100 4815
+Wire Wire Line
+	10100 4815 10370 4815
+Wire Wire Line
+	10000 4080 10000 4615
+Connection ~ 10000 4615
+Wire Wire Line
+	10000 4615 10780 4615
+Wire Wire Line
+	9900 4080 9900 4415
+Connection ~ 9900 4415
+Wire Wire Line
+	9900 4415 10975 4415
+Wire Wire Line
+	9800 4080 9800 4215
+Connection ~ 9800 4215
+Wire Wire Line
+	9800 4215 10255 4215
+Wire Wire Line
+	9320 7580 10100 7580
+Wire Wire Line
+	9320 7380 10000 7380
+Wire Wire Line
+	9320 7180 9900 7180
+Wire Wire Line
+	9320 6980 9800 6980
+Wire Wire Line
+	9320 7480 9700 7480
+$Comp
+L Device:R_Network05 RN7
+U 1 1 6325F9D2
+P 9900 6645
+F 0 "RN7" H 10188 6691 50  0000 L CNN
+F 1 "4.7k" H 10188 6600 50  0000 L CNN
+F 2 "Resistor_THT:R_Array_SIP6" V 10275 6645 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/31509/csc.pdf" H 9900 6645 50  0001 C CNN
+F 4 "Bussed" H 9900 6645 50  0001 C CNN "Notes"
+	1    9900 6645
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10100 6845 10100 7580
+Connection ~ 10100 7580
+Wire Wire Line
+	10100 7580 10485 7580
+Wire Wire Line
+	10000 6845 10000 7380
+Connection ~ 10000 7380
+Wire Wire Line
+	10000 7380 10685 7380
+Wire Wire Line
+	9900 6845 9900 7180
+Connection ~ 9900 7180
+Wire Wire Line
+	9900 7180 11075 7180
+Wire Wire Line
+	9800 6845 9800 6980
+Connection ~ 9800 6980
+Wire Wire Line
+	9800 6980 11345 6980
+Wire Wire Line
+	9700 6845 9700 7480
+Connection ~ 9700 7480
+Wire Wire Line
+	9700 7480 11260 7480
+Wire Wire Line
+	9315 10430 10095 10430
+Wire Wire Line
+	9315 10230 9995 10230
+Wire Wire Line
+	9315 10030 9895 10030
+Wire Wire Line
+	9315 9830 9795 9830
+Wire Wire Line
+	9315 10330 9695 10330
+Wire Wire Line
+	10095 9695 10095 10430
+Connection ~ 10095 10430
+Wire Wire Line
+	10095 10430 10590 10430
+Wire Wire Line
+	9995 9695 9995 10230
+Connection ~ 9995 10230
+Wire Wire Line
+	9995 10230 10780 10230
+Wire Wire Line
+	9895 9695 9895 10030
+Connection ~ 9895 10030
+Wire Wire Line
+	9895 10030 10875 10030
+Wire Wire Line
+	9795 9695 9795 9830
+Connection ~ 9795 9830
+Wire Wire Line
+	9795 9830 11435 9830
+Wire Wire Line
+	9695 9695 9695 10330
+Connection ~ 9695 10330
+Wire Wire Line
+	9695 10330 11345 10330
+$Comp
+L void:Void V0
+U 1 1 631792FB
+P 14825 9580
+F 0 "V0" H 14903 9626 50  0000 L CNN
+F 1 "LOGO" H 14903 9535 50  0000 L CNN
+F 2 "WheelOfJoy:logo" H 14825 9580 50  0001 C CNN
+F 3 "" H 14825 9580 50  0001 C CNN
+	1    14825 9580
+	1    0    0    -1  
+$EndComp
+$Comp
+L void:Void V1
+U 1 1 63197B4D
+P 14825 9770
+F 0 "V1" H 14903 9816 50  0000 L CNN
+F 1 "OSHW_LOGO" H 14903 9725 50  0000 L CNN
+F 2 "WheelOfJoy:cc_by_nc_sa" H 14825 9770 50  0001 C CNN
+F 3 "" H 14825 9770 50  0001 C CNN
+	1    14825 9770
+	1    0    0    -1  
+$EndComp
+$Comp
+L void:Void V9
+U 1 1 6321012F
+P 15510 9770
+F 0 "V9" H 15588 9816 50  0000 L CNN
+F 1 "PORT8_NO" H 15588 9725 50  0000 L CNN
+F 2 "WheelOfJoy:port8" H 15510 9770 50  0001 C CNN
+F 3 "" H 15510 9770 50  0001 C CNN
+	1    15510 9770
+	1    0    0    -1  
+$EndComp
+$Comp
+L void:Void V8
+U 1 1 632105FD
+P 15510 9565
+F 0 "V8" H 15588 9611 50  0000 L CNN
+F 1 "PORT7_NO" H 15588 9520 50  0000 L CNN
+F 2 "WheelOfJoy:port7" H 15510 9565 50  0001 C CNN
+F 3 "" H 15510 9565 50  0001 C CNN
+	1    15510 9565
+	1    0    0    -1  
+$EndComp
+$Comp
+L void:Void V7
+U 1 1 632111D8
+P 15510 9360
+F 0 "V7" H 15588 9406 50  0000 L CNN
+F 1 "PORT6_NO" H 15588 9315 50  0000 L CNN
+F 2 "WheelOfJoy:port6" H 15510 9360 50  0001 C CNN
+F 3 "" H 15510 9360 50  0001 C CNN
+	1    15510 9360
+	1    0    0    -1  
+$EndComp
+$Comp
+L void:Void V6
+U 1 1 63211B68
+P 15510 9155
+F 0 "V6" H 15588 9201 50  0000 L CNN
+F 1 "PORT5_NO" H 15588 9110 50  0000 L CNN
+F 2 "WheelOfJoy:port5" H 15510 9155 50  0001 C CNN
+F 3 "" H 15510 9155 50  0001 C CNN
+	1    15510 9155
+	1    0    0    -1  
+$EndComp
+$Comp
+L void:Void V5
+U 1 1 63242F92
+P 15510 8950
+F 0 "V5" H 15588 8996 50  0000 L CNN
+F 1 "PORT4_NO" H 15588 8905 50  0000 L CNN
+F 2 "WheelOfJoy:port4" H 15510 8950 50  0001 C CNN
+F 3 "" H 15510 8950 50  0001 C CNN
+	1    15510 8950
+	1    0    0    -1  
+$EndComp
+$Comp
+L void:Void V4
+U 1 1 6324393E
+P 15510 8745
+F 0 "V4" H 15588 8791 50  0000 L CNN
+F 1 "PORT3_NO" H 15588 8700 50  0000 L CNN
+F 2 "WheelOfJoy:port3" H 15510 8745 50  0001 C CNN
+F 3 "" H 15510 8745 50  0001 C CNN
+	1    15510 8745
+	1    0    0    -1  
+$EndComp
+$Comp
+L void:Void V3
+U 1 1 63243948
+P 15510 8540
+F 0 "V3" H 15588 8586 50  0000 L CNN
+F 1 "PORT2_NO" H 15588 8495 50  0000 L CNN
+F 2 "WheelOfJoy:port2" H 15510 8540 50  0001 C CNN
+F 3 "" H 15510 8540 50  0001 C CNN
+	1    15510 8540
+	1    0    0    -1  
+$EndComp
+$Comp
+L void:Void V2
+U 1 1 63243952
+P 15510 8335
+F 0 "V2" H 15588 8381 50  0000 L CNN
+F 1 "PORT1_NO" H 15588 8290 50  0000 L CNN
+F 2 "WheelOfJoy:port1" H 15510 8335 50  0001 C CNN
+F 3 "" H 15510 8335 50  0001 C CNN
+	1    15510 8335
+	1    0    0    -1  
+$EndComp
+NoConn ~ 3315 3325
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 6331186A
+P 3380 2325
+F 0 "#FLG0101" H 3380 2400 50  0001 C CNN
+F 1 "PWR_FLAG" V 3380 2453 50  0000 L CNN
+F 2 "" H 3380 2325 50  0001 C CNN
+F 3 "~" H 3380 2325 50  0001 C CNN
+	1    3380 2325
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3245 2325 3380 2325
+$Comp
+L power:PWR_FLAG #FLG0102
+U 1 1 633433C0
+P 3470 3725
+F 0 "#FLG0102" H 3470 3800 50  0001 C CNN
+F 1 "PWR_FLAG" V 3470 3853 50  0000 L CNN
+F 2 "" H 3470 3725 50  0001 C CNN
+F 3 "~" H 3470 3725 50  0001 C CNN
+	1    3470 3725
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3245 3725 3470 3725
+$Comp
+L Device:R_Pack05_SIP_Split RN9
+U 2 1 63C155F9
+P 2640 2725
+F 0 "RN9" V 2600 2980 50  0000 C CNN
+F 1 "100" V 2524 2725 50  0001 C CNN
+F 2 "Resistor_THT:R_Array_SIP10" V 2560 2725 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/31509/csc.pdf" H 2640 2725 50  0001 C CNN
+F 4 "Independent" H 2640 2725 50  0001 C CNN "Notes"
+	2    2640 2725
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Pack05_SIP_Split RN9
+U 3 1 63C16C68
+P 2640 2625
+F 0 "RN9" V 2600 2880 50  0000 C CNN
+F 1 "100" V 2524 2625 50  0001 C CNN
+F 2 "Resistor_THT:R_Array_SIP10" V 2560 2625 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/31509/csc.pdf" H 2640 2625 50  0001 C CNN
+F 4 "Independent" H 2640 2625 50  0001 C CNN "Notes"
+	3    2640 2625
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Pack05_SIP_Split RN9
+U 4 1 63C17F96
+P 2640 2525
+F 0 "RN9" V 2600 2780 50  0000 C CNN
+F 1 "100" V 2524 2525 50  0001 C CNN
+F 2 "Resistor_THT:R_Array_SIP10" V 2560 2525 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/31509/csc.pdf" H 2640 2525 50  0001 C CNN
+F 4 "Independent" H 2640 2525 50  0001 C CNN "Notes"
+	4    2640 2525
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Pack05_SIP_Split RN9
+U 5 1 63C19092
+P 2640 2925
+F 0 "RN9" V 2600 3175 50  0000 C CNN
+F 1 "100" V 2524 2925 50  0001 C CNN
+F 2 "Resistor_THT:R_Array_SIP10" V 2560 2925 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/31509/csc.pdf" H 2640 2925 50  0001 C CNN
+F 4 "Independent" H 2640 2925 50  0001 C CNN "Notes"
+	5    2640 2925
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2215 2325 3245 2325
+Wire Wire Line
+	2790 2525 3315 2525
+Wire Wire Line
+	2790 2725 3315 2725
+Wire Wire Line
+	2790 2925 3315 2925
+Wire Wire Line
+	2790 3125 3315 3125
+Wire Wire Line
+	2790 2625 3315 2625
+$Comp
+L Device:R_Pack05_SIP_Split RN9
+U 1 1 63C134E3
+P 2640 3125
+F 0 "RN9" V 2600 3375 50  0000 C CNN
+F 1 "100" V 2600 2930 50  0000 C CNN
+F 2 "Resistor_THT:R_Array_SIP10" V 2560 3125 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/31509/csc.pdf" H 2640 3125 50  0001 C CNN
+F 4 "Independent" H 2640 3125 50  0001 C CNN "Notes"
+	1    2640 3125
+	0    1    1    0   
+$EndComp
+Wire Bus Line
+	13345 2405 13345 2805
+Wire Bus Line
+	13345 5060 13345 5460
+Wire Bus Line
+	13345 7810 13345 8210
+Wire Bus Line
+	15270 3630 15270 4030
+Wire Bus Line
+	15270 6360 15270 6760
+Wire Bus Line
+	3415 2625 3415 4050
+$EndSCHEMATC
