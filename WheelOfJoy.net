@@ -1,7 +1,7 @@
 (export (version D)
   (design
-    (source /home/sukko/Documents/kicad/WheelOfJoy/WheelOfJoy.sch)
-    (date "Sat 03 Dec 2022 23:46:48 CET")
+    (source /home/sukko/Documents/kicad/WheelOfJoyMini/WheelOfJoy.sch)
+    (date "Sun 04 Dec 2022 16:12:42 CET")
     (tool "Eeschema 5.1.12")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -52,7 +52,7 @@
       (tstamp 635BABF1))
     (comp (ref C4)
       (value 100u)
-      (footprint Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder)
+      (footprint Capacitor_Tantalum_SMD:CP_EIA-7343-30_AVX-N_Pad2.25x2.55mm_HandSolder)
       (datasheet ~)
       (libsource (lib Device) (part CP1) (description "Polarized capacitor, US symbol"))
       (sheetpath (names /) (tstamps /))
@@ -333,7 +333,7 @@
     (library (logical Device)
       (uri /usr/share/kicad/library/Device.lib))
     (library (logical void)
-      (uri /home/sukko/Documents/kicad/WheelOfJoy/libs/void.lib)))
+      (uri /home/sukko/Documents/kicad/WheelOfJoyMini/libs/void.lib)))
   (nets
     (net (code 1) (name "Net-(CN3-Pad2)")
       (node (ref CN3) (pin 2))
