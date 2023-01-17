@@ -51,18 +51,18 @@ The board uses 3 dual 4-to-1 multiplexers, totalling to 6 multiplexers: one per 
 
    | # | Binary    | Hex| Dec |
    |---|-----------|----|-----|
-   | 1 | 001 11111 | 3F |  63 |
-   | 2 | 011 11111 | 7F | 127 |
-   | 3 | 101 11111 | BF | 191 |
-   | 4 | 111 11111 | FF | 255 |
+   | 1 | 00 111111 | 3F |  63 |
+   | 2 | 01 111111 | 7F | 127 |
+   | 3 | 10 111111 | BF | 191 |
+   | 4 | 11 111111 | FF | 255 |
 
-2. Read the value of the User Port register, the lowest 6 bits will report direction/button status:
+2. Read the value of the User Port register, the lower 6 bits will report direction/button status:
 
    | Bit 7 | Bit 6 | Bit 5  | Bit 4  | Bit 3 | Bit 2 | Bit 1 | Bit 0 |
    |-------|-------|--------|--------|-------|-------|-------|-------|
    |   X   |   X   |Button 2|Button 1| Left  | Right | Down  | Up    |
 
-   Every bit will be 0 if the corresponding button is pressed, 1 otherwise.
+   Every bit will be 0 if the corresponding direction/button is pressed, 1 otherwise.
 
 ## Compatibility
 Any Atari-compliant joystick or joypad should work with this board. Button 2 is expected to be wired to pin 9 and to be active-low as all the other buttons. This is the most common setup, used by all 2-button joysticks and adapters designed for the Amiga, including [my PSX adapter](https://github.com/SukkoPera/OpenPSX2AmigaPadAdapter) and the [my variant of the Unijoysticle2](https://gitlab.com/SukkoPera/unijoysticle2).
